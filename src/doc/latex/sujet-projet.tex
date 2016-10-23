@@ -8,6 +8,10 @@
 %\usepackage{hyperref}
 \usepackage{alma}
 \usepackage{longtable}
+\usepackage{graphicx}
+\graphicspath{ {fig/} }
+\usepackage{grffile}
+\usepackage{lastpage}
 \hypersetup
 {
   pdftitle   = {Title},
@@ -15,7 +19,6 @@
   pdfauthor  = {Gerson Sunyé}
 }
 \newcommand{\projet}{Gestion des services}
-
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -30,14 +33,13 @@
 
 \fancypagestyle{empty}{
  \fancyhf{}
- %\fancyhead[R]{Team \#3243 Page \thepage  { }of \pageref{LastPage}}
+ \fancyhead[R]{Team \#3243 Page \thepage  { }of \pageref{LastPage}}
  \lhead{Master Informatique Alma}
  \chead{\includegraphics*[width=7mm]{fig/logo_mini.jpg}}
  \rhead{Université de Nantes}
  \cfoot{\scriptsize{G. Sunyé}}
  \lfoot{\scriptsize\textsl{\today}}
- \rfoot{\scriptsize\textsl{Page \thepage / \pageref{LastPage}}}
-}
+ \rfoot{\scriptsize\textsl{Page \thepage / \pageref{LastPage}}}}
 
 
 \title{Projet «\projet»}
@@ -86,13 +88,14 @@ Le projet se compose de deux livrables:
 	\item Une archive contenant le code source.
 \end{enumerate}
 
-La conception de l'application sera composée de deux parties:
+La conception de l'application sera composée de trois parties:
 \begin{enumerate}
-	\item L'architecture et conception préliminaire (spécification des composants);
+	\item L'architecture.
+	\item La conception préliminaire (spécification des composants);
 	\item La conception détaillée.
 \end{enumerate} 
 
-Le document qui décrut la conception doit être organisé en fonction de la solution proposée (de ses fonctionnalités).
+Les chapitres qui décrivent la conception doivent être organisés en fonction de la solution proposée (de ses fonctionnalités).
 Suivez le modèle proposé dans ce document.
 
 
@@ -100,7 +103,6 @@ Suivez le modèle proposé dans ce document.
 
 L'évaluation sera faite exclusivement sur le respect des exigences logicielles décrites dans le Chapitre~\ref{chapter:exigences}.
 Lisez attentivement toutes les exigences avant de commencer votre projet.
-
 
 \section{Organisation}
 
@@ -120,6 +122,15 @@ Règles à respecter pendant la réalisation du projet:
 	
 	\item Les fichiers Java compilés (*.class) ainsi que les éventuelles bibliothèques utilisées ne doivent pas être rendus avec le code source.
 \end{enumerate}
+
+\section{Préambule}
+
+Les sources de ce document sont disponibles sur l'adresse suivante:
+
+\url{https://github.com/sunye/tp-gestion-services}
+
+Si vous avez des commentaires sur le document ou si vous souhaitez me communiquer des erreurs, merci de le faire directement sur Github.
+Vous pouvez aussi modifier directement les sources du document et m'envoyer ensuite un \emph{pull request}.
 
 
 \input{exigences}

@@ -1,4 +1,4 @@
-%!TEX root = /Users/sunye/Development/Workspaces/teaching/Gestion services/src/doc/latex/sujet-projet.tex
+%!TEX root = ./sujet-projet.tex
 
 \chapter{Spécification des exigences logicielles}\label{chapter:exigences}
 % Template proposé par "The Unified Process for EDUcation (UPEDU)"
@@ -22,10 +22,10 @@ Ce document énumère les exigences du projet «\projet{}». Il suit la norme IE
 \subsection{Objectif}
 %Préciser les objectifs de ce chapitre. La SEL doit décrire le comportement externe de l’application ou du sous-système identifié. Elle décrit aussi les exigences non-fonctionnelles et les autres facteurs nécessaires à une description complète et compréhensible des exigences pour le logiciel.
 Ce document a pour objectif de décrire les exigences fonctionnelles et non-fonctionnelles du projet «\projet».
-On s'attachera à décrire le comportement utilisateur attendu pour chaque aspect du système au travers de cas d'utilisation et de diagrammes de séquences fournis en annexe.
+La description du comportement utilisateur attendu du système fera référence à l'analyse du domaine, présentée dans le Chapitre\ref{chapter:analyse}
 
 \subsection{Portée du document}
-Ce document s’applique seulement au développement de composants « métier » du système. Il ne concerne pas l’interface utilisateur.
+Ce document s’applique seulement au développement de composants «métier» du système. Il ne concerne pas l’interface utilisateur.
 
 \subsection{Définitions, acronymes et abréviations}
 
@@ -34,9 +34,11 @@ Ce document s’applique seulement au développement de composants « métier 
 \toprule
 Acronyme & Description \\
 \midrule
-IHM & Interface Home-Machine\\
-\hline
-REST & Representational State Transfer\\
+CM 			& Cours magistral\\
+IHM 		& Interface Home-Machine\\
+REST 		& Representational State Transfer\\
+TD			& Travaux dirigés\\
+TP			& Travaux pratiques\\
 \bottomrule
 \end{tabular}
 
@@ -55,13 +57,14 @@ Le département doit:
 \begin{itemize}
 	\item Publier la liste des enseignants gérés par le département et donc y réalisant leur service.
 A chaque enseignant est associée le nombre d’heures qu’il doit réaliser.
-C’est en fait une fourchette MIN..MAX. Ces nombrent varient d’un enseignant à l’autre et sont exprimés dans une unité eqTD (heures équivalentes Travaux Dirigés).
+C’est en fait une fourchette MIN..MAX. Ces nombres varient d’un enseignant à l’autre et sont exprimés dans une unité eqTD (heures équivalentes Travaux Dirigés).
 Pour information, 1h de cours représente 1h30 de TD, alors 1h30 de TP représente 1h de TD.
 	\item Publier la liste des enseignements qui doivent être couverts, avec les informations suivantes (cf. exemple Table~\ref{table:enseignements}):
 	\begin{itemize}
 		\item Nom du module.
 		\item Publics concernés (année d’étude, parcours).
-		\item Volume horaire par étudiants (Cours, TD, TP) – Nombre de groupes (Cours, TD, TP).
+		\item Volume horaire par étudiants (Cours, TD, TP).
+		\item Nombre de groupes (Cours, TD, TP).
 		\item Semestre dans l’année universitaire.
 	\end{itemize}
 	\item Affecter les enseignants et visualiser leur nombres d’heures réalisées dans leur service (en éqTD) 
@@ -88,8 +91,7 @@ Pour information, 1h de cours représente 1h30 de TD, alors 1h30 de TP représen
 Les enseignants doivent:
 \begin{itemize}
 	\item Prendre connaissance des enseignements disponibles sur le département.
-	\item Énoncer des préférences quand aux cours qu’ils souhaitent couvrir.
-	\item Pour ce faire, un enseignant constitue la liste des enseignements qu’il souhaite couvrir en les classant du plus souhaité (en position 1) au moins souhaité (dernière position). Cf. Table~\ref{table:demande} pour un exemple. 
+	\item Énoncer des préférences quant aux cours qu’ils souhaitent couvrir. Pour ce faire, un enseignant constitue la liste des enseignements qu’il souhaite couvrir en les classant du plus souhaité (en position 1) au moins souhaité (dernière position). Cf. Table~\ref{table:demande} pour un exemple. 
 Pour être acceptable, une demande doit correspondre à un volume horaire au moins égale à 1,5 fois le service que doit effectuer l’enseignant.
 	\item Prendre connaissance des préférences énoncées par les autres enseignants pour essayer de résoudre les problèmes éventuels autant que faire se peut.
 	\item Prendre connaissance des cours qui leur ont été affectés, les préparer, les assurer.
@@ -147,7 +149,7 @@ Fonctionnalités souhaitées pour le département:
 	\item Mémorisation des services des années passées.
 	\item Constitution de la liste des enseignements à couvrir.
 	\item Récupération des choix des enseignants.
-	\item Afficher les services suivant différent modes (globalement, par modules, par enseignants, par formation, seulement les souhaits, seulement les affectations effectives, les deux, etc.).
+	\item Affichage des services suivant différent modes (globalement, par modules, par enseignants, par formation, seulement les souhaits, seulement les affectations effectives, les deux, etc.).
 	\item Affectation des enseignants sur les enseignements.
 	\item Alertes concernant:
 \begin{itemize}
@@ -157,7 +159,7 @@ Fonctionnalités souhaitées pour le département:
 	\item les enseignants n’entrant pas dans le cadre de leur contrat de service statutaire.
 \end{itemize}
 	\item La possibilité d’effectuer des affectations et des modifications sans les rendre publiques.
-	\item La possibilité de valider un état courant, c’est `a dire de le rendre public.
+	\item La possibilité de valider un état courant, c'est à dire de le rendre public.
 \end{itemize}
 
 Fonctionnalités souhaitées pour les enseignants:
@@ -170,10 +172,9 @@ Fonctionnalités souhaitées pour les enseignants:
 	\item Alertes concernant:
 	\begin{itemize}
 		\item les conflits entre les demandes
-		\item les enseignants dépassant le min ou le max correspondant à leur service par rapport aux affectations réalisées. 
+		\item les enseignants dépassant le minimum ou le maximum correspondant à leur contrat de service par rapport aux affectations réalisées. 
 	Plus particulièrement pour l’enseignant connecté.
 	\end{itemize}
-
 	\item Alarmes lorsque l’affectation effective des services ne respecte pas les choix de l’enseignant.
 	\item Publication du choix.
 \end{itemize}
@@ -186,10 +187,14 @@ Attention, un enseignant doit pouvoir changer sa liste de choix à n’importe q
 %Décrire les caractéristiques générales des utilisateurs qui ont un impact sur les exigences du document. Cela inclut le niveau de scolarité, l’expérience et l’expertise technique.
 %<Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expertise, security or privilege levels, educational level, or experience. Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain user classes. Distinguish the favored user classes from those who are less important to satisfy.>
 
-Les utilisateurs du système seront des développeurs débutants ou expérimentés
+Les utilisateurs du système seront des enseignants avec une certaine maîtrise de l'informatique.
 
 	\subsection{Environnement opérationnel}
 %<Describe the environment in which the software will operate, including the hardware platform, operating system and versions, and any other software components or applications with which it must peacefully coexist.>
+
+Le système sera déployé sur les machines des enseignants du département d'informatique: des ordinateurs de bureau et portables, sous Windows, Linux, OSX et FreeBSD.
+Il sera utilisé lorsque les ordinateurs sont connectés sur un réseau ou déconnectés en mode nomade. 
+
 
 %\subsection{Contraintes de plateforme}
 %  Les contraintes de plateforme sont des contraintes liées à l'aspect matériel (coût d'achat, licence\dots).
@@ -227,24 +232,43 @@ Les utilisateurs du système seront des développeurs débutants ou expériment�
 \end{requirement}
 
 \subsubsection{Conception}
-La conception sera utilisée pour spécifier la mise en oeuvre de la solution. Elle doit être claire et précise.
-Elle doit prioriser la testabilité: le code doit être facilement testable.
+La conception sera utilisée pour spécifier la mise en œuvre de la solution.
 
-Les diagrammes de conception doivent être systématiquement accompagnées d'une description textuelle.
-Ils doivent être cohérents entre eux. 
+\begin{requirement}[{Conception claire}]
+	La conception doit être claire et précise.
+	Les diagrammes de conception doivent être systématiquement accompagnées d'une description textuelle.
+\end{requirement}
+
+\begin{requirement}[{Conception pour la testabilité}]
+	La conception doit prioriser la testabilité: le code doit être facilement testable. 
+\end{requirement}
+
+\begin{requirement}[{Cohérence entre diagrammes}]
+Les diagrammes de conception doivent être cohérents entre eux.
+\end{requirement}
 
 %La conception comprendra un diagramme de classes, des diagrammes d'objet et pour les opérations complexes, des diagrammes de séquence et d'activités. 
 
 \subsubsection{Mise en œuvre}
-La mise en œuvre doit être cohérente avec la conception.
+\begin{requirement}[{Cohérence entre la conception et le code}]
+La mise en œuvre doit être cohérente avec la conception.	
+\end{requirement}
 
-Le code source doit être simple à comprendre et à évaluer: il doit être possible de les compiler et d'exécuter les tests unitaires à partir de la ligne de commandes.
+\begin{requirement}[{Lisibilité du code}]
+Le code source doit être simple à comprendre et à évaluer: il doit être possible de les compiler et d'exécuter les tests unitaires à partir de la ligne de commandes.	
+\end{requirement}
+
+
 
 \subsubsection{Outils de construction}
-L’utilisation d’outil de construction automatique est obligatoire : Maven (version > 2.0) pour Java, Scala et Groovy, Rake pour Python et setuptools pour Python.
+\begin{requirement}[{Construction automatique}]
+	L’utilisation d’outil de construction automatique est obligatoire: Maven ou Gradle.
+\end{requirement}
 
 \subsubsection{Outils de développement}
-L’utilisation d’un environnement de développement (IDE) compatible avec Maven, comme IntelliJ IDEA ou NetBeans, est fortement recommandée. 
+\begin{requirement}[{IDE}]
+	L’utilisation d’un environnement de développement (IDE) compatible avec Maven ou Gradle, comme IntelliJ IDEA ou NetBeans, est fortement recommandée. 
+\end{requirement}
 
 \subsubsection{Bibliothèques et composants logiciels}
 Les tests unitaires doivent utiliser JUnit (version > 4.10) ou son équivalent pour les autres langages de programmation.
@@ -254,7 +278,7 @@ Les tests unitaires doivent utiliser JUnit (version > 4.10) ou son équivalent p
 %<List the user documentation components (such as user manuals, on-line help, and tutorials) that will be delivered along with the software. Identify any known user documentation delivery formats or standards.>
 
 	\subsection{Hypothèses et dépendances}
-Décrire tout élément de faisabilité technique, disponibilité de sous-système ou de composant ou toute autre hypothèse liée au projet de laquelle dépend la viabilité du logiciel.
+%Décrire tout élément de faisabilité technique, disponibilité de sous-système ou de composant ou toute autre hypothèse liée au projet de laquelle dépend la viabilité du logiciel.
 	
 %<List any assumed factors (as opposed to known facts) that could affect the requirements stated in the SRS. These could include third-party or commercial components that you plan to use, issues around the development or operating environment, or constraints. The project could be affected if these assumptions are incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such as software components that you intend to reuse from another project, unless they are already documented elsewhere (for example, in the vision and scope document or the project plan).>
 
@@ -262,6 +286,18 @@ Décrire tout élément de faisabilité technique, disponibilité de sous-systè
 %Énumérer les exigences qui peuvent être réalisées dans des versions futures du système.
 % Les versions futures du système comprendront l’utilisation d’un mécanisme de persistance de données ainsi que différentes interfaces utilisateur: web, IHM classique, etc.
 % Elles permettront aussi l’accès distant à travers une interface REST.
+
+\begin{requirement}[{Import/export CSV}]
+	Le système permettra l'importation et l'exportation de données au format CSV.
+\end{requirement}
+
+\begin{requirement}[{Interface graphique}]
+	Le système sera accessible grâce à une interface graphique simple et ergonomique. 
+\end{requirement}
+
+\begin{requirement}[{Interface Web}]
+	Le système sera accessible à travers une interface web.
+\end{requirement}
 
 
 
@@ -327,7 +363,7 @@ Non applicable.
 	
 %<Describe the requirements associated with any communications functions required by this product, including e-mail, web browser, network server communications protocols, electronic forms, and so on. Define any pertinent message formatting. Identify any communication standards that will be used, such as FTP or HTTP. Specify any communication security or encryption issues, data transfer rates, and synchronization mechanisms.>
 \begin{requirement}[Protocoles ouverts]
-	La communication entre les différents composants du système doit utiliser des protocoles ouverts et disponibles sur différentes architectures.
+	La communication entre les différents composants du système doit utiliser des protocoles ouverts et disponibles sur différentes plateformes.
 \end{requirement}
 
 	\subsection{Contraintes de mémoire}
@@ -342,10 +378,9 @@ Non applicable.
 %Mais cette distribution implique que l'exactitude ne pourra pas, dans certains cas, être parfaite (un serveur, un réseau peuvent tomber\dots).
 
 \begin{requirement}[Correction]
-	La correction de toutes les opérations de tous les composants du système doit être vérifiée par des tests unitaires. 
+	La correction de toutes les opérations de tous les classes du système doit être vérifiée par des tests unitaires. 
+	Plus particulièrement, les interfaces fournies par les composant doivent être testées de manière exhaustive.
 \end{requirement}
- 
-
 
 
  \subsection{Interopérabilité}
@@ -364,9 +399,8 @@ Comme l'application doit interroger des bases distantes, elles-mêmes pouvant ê
 
 
 
-	\subsection{Exigences de performance}
-	
-	 L'application ne nécessite pas de performances particulières (du fait de l'utilisation par un homme) mais nous devons tout de même assurer des temps de réponse raisonnables aux demandes de consultation des bases distantes.
+\subsection{Exigences de performance}
+L'application ne nécessite pas de performances particulières (du fait de l'utilisation par un homme) mais nous devons tout de même assurer des temps de réponse raisonnables aux demandes de consultation des bases distantes.
 	
 	%
 	% Décrire les caractéristiques de la performance du système. Référer les cas d’utilisation lorsque applicable.
@@ -384,7 +418,7 @@ Comme l'application doit interroger des bases distantes, elles-mêmes pouvant ê
 
 \subsection{Maintenabilité}
 	
-	Décrire les exigences qui permettent d’assurer le support et la maintenabilité du système comme, par exemple, les normes de codage, le conventions d’identification, les bibliothèques de classe, l’accès à la maintenance, les services de maintenances, etc. 
+%Décrire les exigences qui permettent d’assurer le support et la maintenabilité du système comme, par exemple, les normes de codage, le conventions d’identification, les bibliothèques de classe, l’accès à la maintenance, les services de maintenances, etc. 
 
 \subsubsection{Conventions de code Java}
 
@@ -452,4 +486,4 @@ Il n’est pas raisonnable de supposer que toutes les demandes sont hébergées 
 
 \listoftheorems[ignoreall,show={requirement}]
 
-\section{Conclusion}
+%\section{Conclusion}
