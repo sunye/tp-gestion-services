@@ -189,7 +189,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_218WAJlkEeahA67C0Vl-eA" memberEnd="_218WAZlkEeahA67C0Vl-eA _218WBJlkEeahA67C0Vl-eA" navigableOwnedEnd="_218WAZlkEeahA67C0Vl-eA _218WBJlkEeahA67C0Vl-eA">
     <name xsi:nil="true"/>
-    <ownedEnd xmi:id="_218WAZlkEeahA67C0Vl-eA" name="voeus" type="_JdfU4JXAEeaJndJbeEalTw" association="_218WAJlkEeahA67C0Vl-eA">
+    <ownedEnd xmi:id="_218WAZlkEeahA67C0Vl-eA" name="voeux" type="_JdfU4JXAEeaJndJbeEalTw" association="_218WAJlkEeahA67C0Vl-eA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_218WAplkEeahA67C0Vl-eA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_218WA5lkEeahA67C0Vl-eA" value="*"/>
     </ownedEnd>

@@ -599,7 +599,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_MpG8UpXAEeaJndJbeEalTw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_MpGVQZXAEeaJndJbeEalTw" fontName=".SF NS Text" bold="true"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MpGVQpXAEeaJndJbeEalTw" x="477" y="424" width="120" height="64"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MpGVQpXAEeaJndJbeEalTw" x="477" y="424" width="120" height="78"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_RB3sUJXAEeaJndJbeEalTw" type="2003" element="_RBU5wJXAEeaJndJbeEalTw">
             <children xmi:type="notation:Node" xmi:id="_RB3sU5XAEeaJndJbeEalTw" type="5007"/>
@@ -1299,7 +1299,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_Association']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_22mdUJlkEeahA67C0Vl-eA" name="A_voeus_enseignements" sourceNode="_Jdf78JXAEeaJndJbeEalTw" targetNode="_haH_EJW-EeaJndJbeEalTw" beginLabel="voeus[*]" endLabel="enseignements[1]">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_22mdUJlkEeahA67C0Vl-eA" name="A_voeux_enseignements" sourceNode="_Jdf78JXAEeaJndJbeEalTw" targetNode="_haH_EJW-EeaJndJbeEalTw" beginLabel="voeux[*]" endLabel="enseignements[1]">
         <target xmi:type="uml:Association" href="model.uml#_218WAJlkEeahA67C0Vl-eA"/>
         <semanticElements xmi:type="uml:Association" href="model.uml#_218WAJlkEeahA67C0Vl-eA"/>
         <semanticElements xmi:type="uml:Property" href="model.uml#_218WBJlkEeahA67C0Vl-eA"/>
