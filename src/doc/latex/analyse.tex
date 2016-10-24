@@ -26,9 +26,9 @@ Dans cette section, nous spécifions  l'ensemble des cas d'utilisation relatifs 
 
 Dans les sections suivantes, nous fournissons une description plus détaillée de chacun des cas d'utilisation.
 
-\subsection{UC\---Affecter des enseignements}
+\subsection{UC---Affecter des enseignements}
 
-\begin{usecase}{Affecter des enseignements}
+\begin{usecase}{Affecter des enseignements}\label{usecase:affecter}
 \begin{information}
 
  \item[Goal in the context:] Le chef de département réalise la confirmation d'un souhait d'un enseignant (validation) ou impose une intervention dans le département à un enseignant (affectation "forcée"). 
@@ -211,9 +211,10 @@ L'imposition d'une intervention à un enseignant crée une instance de la classe
 
 \end{comment}
 
-\subsection{UC\---Publier des interventions, des souhaits et des possibles conflits}
+\subsection{UC---Publier des interventions, des souhaits et des possibles conflits}
 
 \begin{usecase}{Publier des interventions, des souhaits et des possibles conflits}
+\label{usecase:publier}
 \begin{information}
 	
 \item[{Goal in the context:}]
@@ -247,7 +248,7 @@ L'exécution de ce cas d'utilisation peut faire apparaître de nouveaux conflits
 
 \end{usecase}
 
- \subsection{UC\---Analyser des demandes}
+ \subsection{UC---Analyser des demandes}
 
 \begin{usecase}{Analyser des demandes}\label{usecase:analyse}
 
@@ -285,7 +286,7 @@ L'exécution de ce cas d'utilisation peut faire apparaître de nouveaux conflits
 
 \end{usecase}
 
-\subsection{UC\---Émettre un souhait}
+\subsection{UC---Émettre un souhait}
 
 \begin{usecase}{\'Emettre un souhait}\label{usecase:souhait}
 \begin{information}
@@ -396,6 +397,7 @@ Après l'émission du souhait, une instance de la classe \code{Voeu} est créée
 
 \subsection{UC---Publier des souhaits}
 \begin{usecase}{Publier des souhaits}
+\label{usecase:publier}
 \begin{information}
 	\item[Goal in the context:] L'enseignant transmet ses souhaits (préalablement sélectionnés) au chef de département qui sera lui même apte, dans un deuxième temps, à les rendre visibles à l'ensemble des enseignants.
 Un souhait concerne un vœux fait sur des enseignements disponibles (i.e. non affectés), une intervention extérieure au département ou bien encore une demande caractérisée comme étant spéciale (congé, remplacement, \dots). 
@@ -424,9 +426,10 @@ Un souhait concerne un vœux fait sur des enseignements disponibles (i.e. non af
  \end{extension}
 
 
- \subsection{UC7 - Consulter des enseignements}
+ \subsection{UC---Consulter des enseignements}
 
 \begin{usecase}{Consulter des enseignements}
+\label{usecase:consulter}
 \begin{information}
 	\item[Goal in the context:]  L'enseignant doit être capable de visualiser les enseignements afin de consulter ou de modifier ses souhaits.
  Ainsi, des critères de tri sont mis à sa disposition pour personnaliser sa vue des enseignements dans le système "\projet": par module, par enseignement d'un module, par enseignant, ou par nombre d'heures.\\

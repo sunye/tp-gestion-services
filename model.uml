@@ -264,6 +264,11 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Mh_WRplmEeahA67C0Vl-eA" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_HvEdAJlqEeahA67C0Vl-eA" name="Consulter des eneignements"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_MSlrgJlqEeahA67C0Vl-eA" memberEnd="_MSlrgZlqEeahA67C0Vl-eA _MSmSkJlqEeahA67C0Vl-eA">
+    <ownedEnd xmi:id="_MSlrgZlqEeahA67C0Vl-eA" type="_HvEdAJlqEeahA67C0Vl-eA" association="_MSlrgJlqEeahA67C0Vl-eA"/>
+    <ownedEnd xmi:id="_MSmSkJlqEeahA67C0Vl-eA" type="_Ozab4JVsEeazW_04_wbKtA" association="_MSlrgJlqEeahA67C0Vl-eA"/>
+  </packagedElement>
   <profileApplication xmi:id="_YTSW4JbxEeaVJtnna7ptvw">
     <eAnnotations xmi:id="_YTWoUJbxEeaVJtnna7ptvw" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
