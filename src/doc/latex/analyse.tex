@@ -336,7 +336,26 @@ Le volume horaire total (le volume horaire effectif plus la somme des volumes ho
 context UC::EmettreVoeu(ens:Enseignant, m:Module, e:Enseignement, h: Integer, p:Integer)
 post: 
 ens.voeux->exists(v:Voeu| v.enseignement = e and v.volume = h and v.priorite = p)
--- un nouveau voeu est ajouté à la liste des voeux de l'enseignant
+
+-- Un nouveau voeu est ajouté à la liste des voeux de l`enseignant
+\end{ocl}
+
+\begin{ocl}
+context UC::EmettreDemandeExterieure(ens:Enseigant, org:String, vol:Integer)
+post: 
+	ens.demandes->select(each | each.oclIsTypeOf(DemandeInterventionExterieure))->
+		exists(d | d.oclIsNew() and d.volume = vol and d.organisation = org)
+		
+-- Une nouvelle demande d`intervention à l`extérieur est ajoutée à la liste de demandes de l`enseignant.
+\end{ocl}
+
+\begin{ocl}
+context UC::EmettreDemandeSpeciale(ens:Enseignant, t:String, vol:Integer)
+post:
+	ens.demandes->select(each | each.oclIsTypeOf(DemandeSpeciale))->
+		exists( d | d.oclIsNew() and d.volume = vol and d.type = t)
+
+-- Une nouvelle demande spéciale est ajouté à la liste de demandes de l`enseignant.
 \end{ocl}
 
 
@@ -351,47 +370,36 @@ Après l'émission du souhait, une instance de la classe \code{Voeu} est créée
 
  \begin{figure}[!htbp]
  \begin{center}
- \includegraphics[width=.8\linewidth]{"OD-alice-demande-gl"}
+ \includegraphics[scale=.6]{"OD-alice-demande-gl"}
  \caption{Diagramme d'objets: Alice émet son souhait de service}
  \end{center}
  \label{fig:souhait-alice}
  \end{figure}
 
 
- \subsubsection{Instantané: émettre une demande extérieure}
- \indent Cas d'utilisation : \textbf{\'Emettre un souhait} - Acteur : \textbf{Enseignant}.
-
+ \subsubsection{Exemple d'émission d'une demande extérieure}
+Dans cet exemple, l'enseignant Bob fait une demande d'intervention de 12h à l'Institut Mines-Télécom Atlantique.
+Le diagramme d'objets présenté dans la Figure~\ref{fig:demande:exterieure} illustre cette demande.
+L'émission d'une demande extérieure crée une nouvelle demande extérieure associée à l'enseignant.
+ 
  \begin{figure}[!htbp]
  \begin{center}
- \includegraphics[width=14cm]{fig/5-EmissionDemandeExterieur.jpg}
- \caption{\'Emission d'une demande extérieure}
+ \includegraphics[scale=.6]{OD-emettre-demande-exterieure}
+ \caption{\'Emission d'une demande d'intervention extérieure}
+ \label{fig:demande:exterieure}
  \end{center}
  \end{figure}
 
- \indent L'émission d'une demande extérieure crée une nouvelle demande extérieure associée à l'enseignant.
- \begin{verbatim}
- context Enseignant::emettreDemandeExterieure(d : DemandeExterieure)
- post : self.emet -> include(d)
- \end{verbatim}
- \emph{La DemandeExterieure ajoutée appartient à la liste des souhaits (self.emet) de l'enseignant. C'est l'enseignant qui ajoute cette DemandeExterieure à sa liste de souhaits.}
+ \subsubsection{Exemple d'émission d'une demande spéciale}
+Dans cet exemple, l'enseignant Charles fait une demande de congés paternité, qui équivaut à 12h de décharge de service.
+L'émission d'une demande spéciale crée la demande spéciale associée à l'enseignant.
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=.6]{OD-emettre-demande-speciale}
+\caption{\'Emission d'une demande spéciale}
+\end{center}
+\end{figure}
 
- \subsubsection{Instantané: émettre une demande spéciale}
- \indent Cas d'utilisation : \textbf{\'Emettre un souhait} - Acteur : \textbf{Enseignant}.
-
- \begin{figure}[!htbp]
- \begin{center}
- \includegraphics[width=14cm]{fig/7-EmissionSpecial.jpg}
- \caption{\'Emission d'une demande spéciale}
- \end{center}
- \end{figure}
-
- \indent L'émission d'une demande spéciale crée la demande spéciale associée à l'enseignant.
-
- \begin{ocl}
- context Enseignant::emettreDemandeSpeciale(ds : DemandeSpeciale)
- post : self.est_affecte_pour -> include(ds)
- \end{ocl}
- \emph{La DemandeSpeciale ajoutée appartient à la liste des souhaits (self.emet) de l'enseignant. C'est l'enseignant qui ajoute cette DemandeSpeciale à sa liste de souhaits.}
 
 
 
