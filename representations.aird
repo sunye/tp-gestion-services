@@ -1299,7 +1299,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_Association']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_22mdUJlkEeahA67C0Vl-eA" name="A_voeux_enseignements" sourceNode="_Jdf78JXAEeaJndJbeEalTw" targetNode="_haH_EJW-EeaJndJbeEalTw" beginLabel="voeux[*]" endLabel="enseignements[1]">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_22mdUJlkEeahA67C0Vl-eA" name="A_voeux_enseignement" sourceNode="_Jdf78JXAEeaJndJbeEalTw" targetNode="_haH_EJW-EeaJndJbeEalTw" beginLabel="voeux[*]" endLabel="enseignement[1]">
         <target xmi:type="uml:Association" href="model.uml#_218WAJlkEeahA67C0Vl-eA"/>
         <semanticElements xmi:type="uml:Association" href="model.uml#_218WAJlkEeahA67C0Vl-eA"/>
         <semanticElements xmi:type="uml:Property" href="model.uml#_218WBJlkEeahA67C0Vl-eA"/>

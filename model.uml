@@ -193,7 +193,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_218WAplkEeahA67C0Vl-eA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_218WA5lkEeahA67C0Vl-eA" value="*"/>
     </ownedEnd>
-    <ownedEnd xmi:id="_218WBJlkEeahA67C0Vl-eA" name="enseignements" type="_haHYAJW-EeaJndJbeEalTw" association="_218WAJlkEeahA67C0Vl-eA">
+    <ownedEnd xmi:id="_218WBJlkEeahA67C0Vl-eA" name="enseignement" type="_haHYAJW-EeaJndJbeEalTw" association="_218WAJlkEeahA67C0Vl-eA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_218WBZlkEeahA67C0Vl-eA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_218WBplkEeahA67C0Vl-eA" value="1"/>
     </ownedEnd>
