@@ -138,7 +138,7 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_RBUSsJXAEeaJndJbeEalTw" name="Demande Spéciale">
     <generalization xmi:id="_ZDG94JXLEeaJndJbeEalTw" general="_dq6F4JW_EeaJndJbeEalTw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_VkTLoJbyEeaVJtnna7ptvw" name="Publier interventions, souhaits, conflits. "/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_VkTLoJbyEeaVJtnna7ptvw" name="Valider interventions, souhaits, conflits. "/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_cX2jEJbyEeaVJtnna7ptvw" name="Analyser les demandes"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_jL3NgJbyEeaVJtnna7ptvw" name="Effectuer analyse statique"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_oOFxQJbyEeaVJtnna7ptvw" name="Publier des souhaits"/>

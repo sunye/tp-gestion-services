@@ -254,7 +254,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Capture']/@ownedRepresentations[name='Use%20Case%20Diagram']/@defaultLayer/@nodeMappings[name='UCD_UseCase']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_VkWO8JbyEeaVJtnna7ptvw" name="Publier interventions, souhaits, conflits. " outgoingEdges="_wsikQJbyEeaVJtnna7ptvw" width="14" height="14" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_VkWO8JbyEeaVJtnna7ptvw" name="Valider interventions, souhaits, conflits. " outgoingEdges="_wsikQJbyEeaVJtnna7ptvw" width="14" height="14" resizeKind="NSEW">
         <target xmi:type="uml:UseCase" href="model.uml#_VkTLoJbyEeaVJtnna7ptvw"/>
         <semanticElements xmi:type="uml:UseCase" href="model.uml#_VkTLoJbyEeaVJtnna7ptvw"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

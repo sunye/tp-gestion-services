@@ -55,12 +55,13 @@ Chef de département.
 \end{information}
 
 \begin{scenario}
- \item Le chef de département visualise l'ensemble des souhaits publiés par les enseignants.
- \item Le chef de département sélectionne des souhaits, selon certains critères (l'enseignant, le module concerné, \dots).
- %\item Le système renvoie les souhaits correspondants aux critères.  
- \item Le chef de département choisit un v\oe u d'un enseignant afin de le valider.
- \item Le chef de département valide le v\oe u, l'enseignement associé au v\oe u est affecté à l'enseignant concerné : c'est-à-dire que le v\oe u donne lieu à une intervention effective.
- \end{scenario}
+\item Le chef de département visualise l'ensemble des souhaits publiés par les enseignants.
+\item Le chef de département sélectionne des souhaits, selon certains critères (l'enseignant, le module concerné, \dots).
+%\item Le système renvoie les souhaits correspondants aux critères.  
+\item Le chef de département choisit un vœu d'un enseignant afin de le valider.
+\item Le chef de département valide le vœu, l'enseignement associé au vœu est affecté à l'enseignant concerné: c'est-à-dire que le vœu donne lieu à une intervention effective.
+\item Le volume horaire des enseignants concernés est recalculé. 
+\end{scenario}
 
  \begin{variation}
  \item [4] Le chef de département impose une intervention à un enseignant dans son département (affectation imposée).
@@ -197,7 +198,7 @@ L'imposition d'une intervention à un enseignant crée une instance de la classe
  \end{center}
  \end{figure}
 
- Dans ce scénario, le conflit est réglé par le chef de département qui affecte l'enseignement à un seul des deux enseignants (la demande de l'autre enseignant est alors considérée comme étant refusée).
+Dans ce scénario, le conflit est réglé par le chef de département qui affecte l'enseignement à un seul des deux enseignants (la demande de l'autre enseignant est alors considérée comme étant refusée).
 
  \subsubsection{Conflit entre deux enseignants - résolution par un des enseignants}
  \begin{figure}[!htbp]
@@ -207,43 +208,45 @@ L'imposition d'une intervention à un enseignant crée une instance de la classe
  \end{center}
  \end{figure}
 
- Dans ce scénario, le conflit est réglé par un des deux enseignants qui annule son v\oe u concernant l'enseignement à l'origine du conflit.  
+ Dans ce scénario, le conflit est réglé par un des deux enseignants qui annule son vœu concernant l'enseignement à l'origine du conflit.  
 
 \end{comment}
 
-\subsection{UC---Publier des interventions, des souhaits et des possibles conflits}
+\subsection{UC---Valider des souhaits et publication des possibles conflits}
 
-\begin{usecase}{Publier des interventions, des souhaits et des possibles conflits}
+\begin{usecase}{Valider des souhaits et publication des possibles conflits}
 \label{usecase:publier}
 \begin{information}
 	
 \item[{Goal in the context:}]
- Le chef de département, par cette action, permet aux autres acteurs du système (en l'occurence les enseignants) de visualiser les informations concernant l'état actuel des souhaits et des affectations (interventions) de l'ensemble des enseignants. 
+ Le chef de département, par cette action, permet aux autres acteurs du système (en l'occurence les enseignants) de visualiser les informations concernant l'état actuel des souhaits de l'ensemble des enseignants. 
 L'exécution de ce cas d'utilisation peut faire apparaître de nouveaux conflits pour les enseignants.
 
-\item[{Scope:}] Département
+\item[Scope:] Département
 
  \item[{Level:}] Résumé
 
  \item[Precondition:] aucune
 
  \item[{Success End Condition:}]
- Les enseignants ont accès aux informations concernant l'état actuel des souhaits et des affectations publiés. Dans le cas de publication d'interventions, le volume horaire des enseignants concernés est recalculé. Des conflits peuvent apparaître localement pour chaque enseignant.
+Les enseignants ont accès aux informations concernant l'état actuel des souhaits publiés. 
+Des conflits peuvent apparaître localement pour chaque enseignant.
 
  \item[{Failed End Condition:}]
  Echec de la publication : les enseignants n'ont toujours pas accès aux informations que le chef de département a tenté de publier.
 
- \item[{Primary actor:}]
- Chef de département.
+\item[Primary actor:] Chef de département.
 
  \item[{Trigger:}]
  Demande de publication des interventions, des souhaits et des conflits possibles faite par le chef de département.
 \end{information}
 
 \begin{scenario}
-\item Le chef de département visualise l'ensemble des souhaits et des affectations non publiés.
+\item Le chef de département visualise l'ensemble des souhaits non publiés.
 % \item L'application renvoie l'ensemble des information voulues.
- \item Le chef de département sélectionne un ensemble de souhait et d'affectations et les rend publics pour les autres enseignants.
+ \item Le chef de département sélectionne un ensemble de souhait et les valide.
+ \item Le chef de département rend publics les souhaits validés.
+ \item Le chef de département publie les nouveaux conflits qui sont apparus après la validation.
 \end{scenario}
 
 \end{usecase}
@@ -292,7 +295,7 @@ L'exécution de ce cas d'utilisation peut faire apparaître de nouveaux conflits
 \begin{information}
 
 \item [{Goal in the context:}]
- L'enseignant émet un souhait. Le souhait correspond à v\oe u sur un ensemble d'enseignements (avec une préférence) du département, une demande d'intervention extérieure au département ou une demande spéciale (arrêt maladie, remplacement,\dots)
+ L'enseignant émet un souhait. Le souhait correspond à vœu sur un ensemble d'enseignements (avec une préférence) du département, une demande d'intervention extérieure au département ou une demande spéciale (arrêt maladie, remplacement,\dots)
 
 \item[Scope:] Département
 
@@ -319,7 +322,7 @@ Le volume horaire total (le volume horaire effectif plus la somme des volumes ho
 
 
 \begin{extension}
- \item [3a.] Le v\oe u génère un conflit (avec d'autres souhaits déjà rendus publics) : le système le notifie à l'enseignant.
+ \item [3a.] Le vœu génère un conflit (avec d'autres souhaits déjà rendus publics) : le système le notifie à l'enseignant.
  \item [3b.] Le souhait génère un surplus d'heures pour l'enseignant (par rapport à son contrat de services) : le système le notifie à l'enseignant.
 \end{extension}
 
@@ -422,7 +425,7 @@ Un souhait concerne un vœux fait sur des enseignements disponibles (i.e. non af
 
 \begin{scenario}
 	\item L'enseignant choisit de visualiser l'ensemble des souhaits qu'il a réalisé localement mais qu'il n'a pas encore publié.
-%	\item Le système lui renvoie l'ensemble de ces souhaits classés selon leur type (i.e. v\oe u, intervention extérieure et demande spéciale)
+%	\item Le système lui renvoie l'ensemble de ces souhaits classés selon leur type (i.e. vœu, intervention extérieure et demande spéciale)
 	\item L'utilisateur choisit, parmi ces souhaits, ceux qu'il désire publier et les transmet au chef de département.
 	\item Le chef du département reçoit les vœux de l'enseignant.
 \end{scenario}
@@ -430,7 +433,7 @@ Un souhait concerne un vœux fait sur des enseignements disponibles (i.e. non af
  \begin{extension}
 	 \item [2a.] Le système lui signifie qu'il n'existe pas de souhaits qui sont en attente d'être publiés.
 	 \item [3a.] L'enseignant décide de ne publier aucun de ces souhaits et annule sa demande de publication.
-	 \item [4a]. Le système signifie à l'utilisateur que l'un de ces souhaits (en l'occurence un v\oe u) concerne un ou plusieurs enseignements qui ont été affectés ou supprimés et lui demande de modifier son vœu.\\
+	 \item [4a]. Le système signifie à l'utilisateur que l'un de ces souhaits (en l'occurence un vœu) concerne un ou plusieurs enseignements qui ont été affectés ou supprimés et lui demande de modifier son vœu.\\
  \end{extension}
 
 
@@ -442,7 +445,7 @@ Un souhait concerne un vœux fait sur des enseignements disponibles (i.e. non af
 	\item[Goal in the context:]  L'enseignant doit être capable de visualiser les enseignements afin de consulter ou de modifier ses souhaits.
  Ainsi, des critères de tri sont mis à sa disposition pour personnaliser sa vue des enseignements dans le système "\projet": par module, par enseignement d'un module, par enseignant, ou par nombre d'heures.\\
  De plus, il doit choisir les critères de sélection des enseignements qu'il souhaite visualiser:
-Les enseignements concernés par des v\oe ux publiés ou non; les enseignements concernés par des v\oe ux déjà validés (affectations);
+Les enseignements concernés par des vœux publiés ou non; les enseignements concernés par des vœux déjà validés (affectations);
 ou les enseignements affectés et ceux non affectés.\\
  L'enseignant peut choisir de visualiser les enseignements des années précédentes mais il ne pourra effectuer aucune modification sur ces années. Par défaut, la visualisation se fera sur l'année en cours.
  L'utilisateur choisit l'ensemble des critères de tri et de sélection sur les enseignements qu'il souhaite. Il peut donc entièrement paramétrer sa vue des enseignements.
@@ -542,7 +545,7 @@ Chaque module a pour responsable un enseignant qui se doit, en principe, d'assur
 
  Les enseignants sont caractérisés par leur nom et leur statut et doivent chacun remplir un contrat de service par année, c'est-à-dire effectuer un certain nombre d'heures minimum d'enseignement par année (calculé à partir des coefficients des enseignements). Il est important de noter que le contrat de service est uniquement fonction du statut de l'enseignant et est indépendant du département auquel il est rattaché.
 
- Chaque enseignant peut émettre un certain nombre de souhaits afin d'indiquer la manière dont il désire remplir son contrat de service. Ces souhaits peuvent être des v\oe ux (indications du ou des enseignements que l'enseignant souhaite dispenser ainsi que ses préférences les concernant), des demandes d'intervention extérieure (dans une entreprise, une autre école...) ou des demandes spéciales (congés, arrêts maladie, encadrements de stages ou de TER\dots).
+ Chaque enseignant peut émettre un certain nombre de souhaits afin d'indiquer la manière dont il désire remplir son contrat de service. Ces souhaits peuvent être des vœux (indications du ou des enseignements que l'enseignant souhaite dispenser ainsi que ses préférences les concernant), des demandes d'intervention extérieure (dans une entreprise, une autre école...) ou des demandes spéciales (congés, arrêts maladie, encadrements de stages ou de TER\dots).
 
  Il est ensuite du ressort du chef du département concerné de décider de valider ou non ces souhaits, i.e. d'affecter ou non à l'enseignant concerné les interventions correspondantes aux souhaits émis. Toutefois, pour régler certains conflits, le chef d'un département se réserve le droit d'imposer une affectation à un enseignant sans que cet enseignant en ait auparavant formulé le souhait.
 
