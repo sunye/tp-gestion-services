@@ -58,7 +58,7 @@ Le département doit:
 	\item Publier la liste des enseignants gérés par le département et donc y réalisant leur service.
 A chaque enseignant est associée le nombre d’heures qu’il doit réaliser.
 C’est en fait une fourchette MIN..MAX. Ces nombres varient d’un enseignant à l’autre et sont exprimés dans une unité eqTD (heures équivalentes Travaux Dirigés).
-Pour information, 1h de cours représente 1h30 de TD, alors 1h30 de TP représente 1h de TD.
+Pour information, 1h de cours représente 1h30 de TD, alors que 1h30 de TP représente 1h de TD.
 	\item Publier la liste des enseignements qui doivent être couverts, avec les informations suivantes (cf. exemple Table~\ref{table:enseignements}):
 	\begin{itemize}
 		\item Nom du module.
@@ -463,7 +463,8 @@ La sécurité influe beaucoup sur la performance d'exécution. Cette dernière n
 \end{requirement}
 
 \begin{requirement}[Localisation des applications]
-Il n’est pas raisonnable de supposer que toutes les demandes sont hébergées sur la même machine. Il est donc nécessaire de les localiser.
+	Il n’est pas raisonnable de supposer que tous les composants soient hébergées sur la même machine.
+	Il est donc nécessaire de les localiser.
 \end{requirement}
 
 \subsection{Outils de développement}
