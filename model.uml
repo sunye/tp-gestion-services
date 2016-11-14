@@ -233,9 +233,10 @@
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_ySGh8JllEeahA67C0Vl-eA" memberEnd="_ySGh8ZllEeahA67C0Vl-eA _ySGh9JllEeahA67C0Vl-eA" navigableOwnedEnd="_ySGh8ZllEeahA67C0Vl-eA _ySGh9JllEeahA67C0Vl-eA">
-    <ownedEnd xmi:id="_ySGh8ZllEeahA67C0Vl-eA" name="enseignants" type="_M-iWkJW8EeaJndJbeEalTw" association="_ySGh8JllEeahA67C0Vl-eA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ySGh8pllEeahA67C0Vl-eA"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ySGh85llEeahA67C0Vl-eA" value="*"/>
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:id="_ySGh8ZllEeahA67C0Vl-eA" name="enseignant" type="_M-iWkJW8EeaJndJbeEalTw" association="_ySGh8JllEeahA67C0Vl-eA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ySGh8pllEeahA67C0Vl-eA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ySGh85llEeahA67C0Vl-eA" value="1"/>
     </ownedEnd>
     <ownedEnd xmi:id="_ySGh9JllEeahA67C0Vl-eA" name="services" type="_k_s3wJllEeahA67C0Vl-eA" association="_ySGh8JllEeahA67C0Vl-eA">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ySGh9ZllEeahA67C0Vl-eA"/>

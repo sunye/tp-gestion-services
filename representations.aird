@@ -1363,7 +1363,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_ReusedMappingForFeatures']/@subNodeMappings[name='CD_Property']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_yS_SwJllEeahA67C0Vl-eA" name="A_enseignants_services" sourceNode="_M-i9oJW8EeaJndJbeEalTw" targetNode="_k_uF4JllEeahA67C0Vl-eA" beginLabel="enseignants[*]" endLabel="services[*]">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_yS_SwJllEeahA67C0Vl-eA" name="A_enseignant_services" sourceNode="_M-i9oJW8EeaJndJbeEalTw" targetNode="_k_uF4JllEeahA67C0Vl-eA" beginLabel="enseignant[1]" endLabel="services[*]">
         <target xmi:type="uml:Association" href="model.uml#_ySGh8JllEeahA67C0Vl-eA"/>
         <semanticElements xmi:type="uml:Association" href="model.uml#_ySGh8JllEeahA67C0Vl-eA"/>
         <semanticElements xmi:type="uml:Property" href="model.uml#_ySGh9JllEeahA67C0Vl-eA"/>
