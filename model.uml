@@ -223,12 +223,12 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_k_s3wJllEeahA67C0Vl-eA" name="Service">
     <ownedAttribute xmi:id="_nrsj8JllEeahA67C0Vl-eA" name="volume" visibility="public" isDerived="true">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nrtLAJllEeahA67C0Vl-eA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nrtLAJllEeahA67C0Vl-eA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nrtLAZllEeahA67C0Vl-eA" value="1"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_qGUMQJllEeahA67C0Vl-eA" name="annee" visibility="public">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qGUzUJllEeahA67C0Vl-eA"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qGUzUJllEeahA67C0Vl-eA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qGUzUZllEeahA67C0Vl-eA" value="1"/>
     </ownedAttribute>
   </packagedElement>
