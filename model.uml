@@ -104,9 +104,8 @@
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_q9puUJW_EeaJndJbeEalTw" name="Intervention" isAbstract="true">
-    <ownedAttribute xmi:id="_taCRMJW_EeaJndJbeEalTw" name="volume" visibility="public">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_taCRMZW_EeaJndJbeEalTw"/>
+    <ownedAttribute xmi:id="_taCRMJW_EeaJndJbeEalTw" name="volume" visibility="public" type="_80fpgJW-EeaJndJbeEalTw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_taCRMZW_EeaJndJbeEalTw" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_taCRMpW_EeaJndJbeEalTw" value="1"/>
     </ownedAttribute>
   </packagedElement>
@@ -221,8 +220,7 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_k_s3wJllEeahA67C0Vl-eA" name="Service">
-    <ownedAttribute xmi:id="_nrsj8JllEeahA67C0Vl-eA" name="volume" visibility="public" isDerived="true">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    <ownedAttribute xmi:id="_nrsj8JllEeahA67C0Vl-eA" name="volume" visibility="public" type="_80fpgJW-EeaJndJbeEalTw" isDerived="true">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nrtLAJllEeahA67C0Vl-eA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nrtLAZllEeahA67C0Vl-eA" value="1"/>
     </ownedAttribute>
